@@ -5,11 +5,18 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', 'nuxt-lodash', 'nuxt-headlessui'],
-  css: ['@/assets/scss/main.scss'],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
+    "nuxt-lodash",
+    "nuxt-headlessui",
+    "nuxt-swiper",
+    "@nuxt/image"
+  ],
+  css: ["@/assets/scss/main.scss"],
 
   tailwindcss: {
-    cssPath: '@/assets/scss/main.scss',
+    cssPath: "@/assets/scss/main.scss",
     viewer: false,
   },
 
@@ -18,7 +25,7 @@ export default defineNuxtConfig({
    * @see https://nuxt.com/modules/lodash
    */
   lodash: {
-    prefix: '_',
+    prefix: "_",
     upperAfterPrefix: false,
   },
 
@@ -27,10 +34,10 @@ export default defineNuxtConfig({
    * @see https://nuxt.com/modules/headlessui
    */
   headlessui: {
-    prefix: 'Headless',
+    prefix: "Headless",
   },
 
   devtools: {
     enabled: true,
   },
-})
+});

@@ -11,6 +11,7 @@
     "storybook-serve": "npx http-server ./storybook-static"
   },
   "devDependencies": {
+    "@nuxt/image": "^1.1.0",
     "@nuxtjs/tailwindcss": "6.9.5",
     "@storybook/addon-a11y": "7.6.0-alpha.6",
     "@storybook/addon-designs": "7.0.5",
@@ -37,5 +38,8 @@
     "vite-tsconfig-paths": "4.2.1"
   },
   "name": "my-nuxt-starter",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "dependencies": {
+    "nuxt-swiper": "^1.2.2"
+  }
 }
