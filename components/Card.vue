@@ -14,8 +14,10 @@ const humanAge = computed(() => {
 
 <template>
   <div class="card mx-4 mb-4">
-    <p class="font-bold mb-2">{{ title }}</p>
-    <div class="space-x-2">
+    <h1 class="font-bold">{{ title }}</h1>
+    <h2 class="mb-4">{{ subtitle }}</h2>
+    <p class="mb-4">{{ text }}</p>
+    <!-- <div class="space-x-2">
       <label for="age">Your dog's age</label>
       <input
         class="text-black rounded-sm p-1"
@@ -29,7 +31,7 @@ const humanAge = computed(() => {
     </div>
     <p>
       In human age: <span>{{ humanAge }}</span>
-    </p>
+    </p> -->
   </div>
 </template>
 
@@ -38,9 +40,9 @@ const humanAge = computed(() => {
 .card {
   backdrop-filter: blur(15px) saturate(100%);
   -webkit-backdrop-filter: blur(15px) saturate(100%);
-  background-color: rgba(74, 222, 128, 0.5);
+  background-color: #034748;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
   padding: 20px;
 }
 </style>

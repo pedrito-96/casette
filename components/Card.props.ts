@@ -1,3 +1,5 @@
 export type CardProps = {
-  title: string
-}
+  title: string;
+  subtitle?: string;
+  text?: string;
+};

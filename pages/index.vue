@@ -6,9 +6,14 @@
       text="Dolore officia ab impedit iste non illo itaque quos nesciunt modi adipisci, odit aperiam nemo, est tenetur reiciendis, maiores repellendus."
     /> -->
 
+    {{ $t("test") }}
+    <Card
+      title="Is your dog older than you?"
+      subtitle="damn bro"
+      text="Dolore officia ab impedit iste non illo itaque quos nesciunt modi adipisci, odit aperiam nemo, est tenetur reiciendis, maiores repellendus."
+    />
     <Card title="Is your dog older than you?" />
-    <Card title="Is your dog older than you?" />
-    <div class="w-full bg-orange-100 h-[50dvh]"></div>
+    <div class="w-full @apply bg-[#D1BEB0] h-[50dvh]"></div>
     <Card title="Is your dog older than you?" />
   </div>
 </template>

@@ -1,17 +1,48 @@
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "url";
+import VueI18nVitePlugin from "@intlify/unplugin-vue-i18n/vite";
+
 export default defineNuxtConfig({
+  build: {
+    transpile: ["vue-i18n"],
+  },
+  vite: {
+    plugins: [
+      VueI18nVitePlugin({
+        include: [
+          resolve(dirname(fileURLToPath(import.meta.url)), "./locales/*.json"),
+        ],
+      }),
+    ],
+  },
   app: {
     head: {
-      title: "Martin's Nuxt Starter",
+      title: "Casette",
     },
   },
-
+  i18n: {
+    // locales: [
+    //   {
+    //     code: "en",
+    //     name: "English",
+    //   },
+    //   {
+    //     code: "it",
+    //     name: "Italiano",
+    //   },
+    // ],
+    locales: ["en", "it"],
+    defaultLocale: "it",
+    strategy: "prefix",
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "nuxt-lodash",
     "nuxt-headlessui",
     "nuxt-swiper",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxtjs/i18n",
   ],
   css: ["@/assets/scss/main.scss"],
 

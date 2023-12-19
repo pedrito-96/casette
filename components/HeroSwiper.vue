@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="w-full h-[50vh] bg-black">
+  <div class="w-full h-[70dvh] bg-black">
     <Swiper
       :modules="[
         SwiperAutoplay,
@@ -20,7 +20,7 @@
       }"
       :autoplay="{
         delay: 8000,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
       }"
       :effect="'creative'"
       :creative-effect="{
@@ -33,6 +33,13 @@
         },
       }"
     >
+      <SwiperSlide>
+        <NuxtImg
+          src="https://picsum.photos/200/300?grayscale"
+          class="aspect-video"
+          placeholder
+        />
+      </SwiperSlide>
       <SwiperSlide>
         <NuxtImg
           src="https://picsum.photos/200/300?grayscale"
@@ -119,5 +126,19 @@
 div.swiper-button-prev,
 div.swiper-button-next {
   @apply text-blue-100 hidden md:block;
+}
+
+.swiper-slide img {
+  transform-origin: center;
+  animation: zoomin 57s 1;
+  -webkit-animation: zoomin 57s 1;
+}
+@keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.8);
+  }
 }
 </style>
