@@ -7,13 +7,18 @@
     /> -->
 
     {{ $t("test") }}
-    <Card
-      title="Is your dog older than you?"
-      subtitle="damn bro"
-      text="Dolore officia ab impedit iste non illo itaque quos nesciunt modi adipisci, odit aperiam nemo, est tenetur reiciendis, maiores repellendus."
-    />
-    <Card title="Is your dog older than you?" />
-    <div class="w-full @apply bg-[#D1BEB0] h-[50dvh]"></div>
-    <Card title="Is your dog older than you?" />
+    <div class="flex flex-col gap-4 px-4">
+      <Card
+        :title="$t('aboutUs')"
+        subtitle="damn bro"
+        text="Dolore officia ab
+  impedit iste non illo itaque quos nesciunt modi adipisci, odit aperiam nemo,
+  est tenetur reiciendis, maiores repellendus."
+      />
+      <ReviewSwiper />
+      <Card title="Is your dog older than you?" />
+      <div class="w-full @apply bg-[#D1BEB0] h-[50dvh]"></div>
+      <Card title="Is your dog older than you?" />
+    </div>
   </div>
 </template>

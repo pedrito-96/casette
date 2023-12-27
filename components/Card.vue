@@ -13,10 +13,22 @@ const humanAge = computed(() => {
 </script>
 
 <template>
-  <div class="card mx-4 mb-4">
+  <div class="card w-full" :class="{ 'h-[180px]': isReview }">
+    <div v-if="isReview" class="flex justify-between items-baseline mb-4">
+      <div class="flex gap-2 items-baseline">
+        <NuxtImg
+          src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg"
+          class="aspect-square h-8 w-8 rounded-full"
+        />
+        <h1>Nome Cognome</h1>
+      </div>
+      <span>★★★★★</span>
+    </div>
     <h1 class="font-bold">{{ title }}</h1>
-    <h2 class="mb-4">{{ subtitle }}</h2>
-    <p class="mb-4">{{ text }}</p>
+    <h2 class="mb-2">{{ subtitle }}</h2>
+    <p class="mb-2" :class="{ 'overflow-y-scroll line-clamp-2': isReview }">
+      {{ text }}
+    </p>
     <!-- <div class="space-x-2">
       <label for="age">Your dog's age</label>
       <input

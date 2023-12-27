@@ -4,5 +4,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#D1BEB0] text-white;
+  @apply bg-[var(--website-bg-color)] text-white;
+}
+
+:root {
+  --website-bg-color: #d1beb0;
 }
