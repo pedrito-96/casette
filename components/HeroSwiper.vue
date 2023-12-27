@@ -34,11 +34,7 @@
       }"
     >
       <SwiperSlide>
-        <NuxtImg
-          src="https://picsum.photos/200/300?grayscale"
-          class="aspect-video"
-          placeholder
-        />
+        <NuxtImg src="../public/casetta.jpg" class="aspect-video" placeholder />
       </SwiperSlide>
       <SwiperSlide>
         <NuxtImg
@@ -80,7 +76,7 @@
     <SwiperSlide> Slide 3 </SwiperSlide>
   </Swiper> -->
 </template>
-<style>
+<style scoped>
 .swiper {
   width: 100%;
   height: 100%;
@@ -103,7 +99,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: bottom;
 }
 
 .swiper-pagination {

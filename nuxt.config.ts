@@ -21,17 +21,17 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
-    // locales: [
-    //   {
-    //     code: "en",
-    //     name: "English",
-    //   },
-    //   {
-    //     code: "it",
-    //     name: "Italiano",
-    //   },
-    // ],
-    locales: ["en", "it"],
+    locales: [
+      {
+        code: "en",
+        name: "English",
+      },
+      {
+        code: "it",
+        name: "Italiano",
+      },
+    ],
+    // locales: ["en", "it"],
     defaultLocale: "it",
     strategy: "prefix",
   },
