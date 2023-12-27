@@ -77,51 +77,12 @@
   </Swiper> -->
 </template>
 <style scoped>
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  color: #000;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: bottom;
-}
-
-.swiper-pagination {
-  @apply bg-red-400 bottom-0;
-}
-
-.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  @apply bg-slate-500;
-}
-
-.swiper-horizontal > .swiper-pagination-progressbar,
-.swiper-pagination-progressbar.swiper-pagination-horizontal,
-.swiper-vertical
-  > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
-.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
-  top: initial;
-  bottom: 0;
-}
-
-div.swiper-button-prev,
-div.swiper-button-next {
-  @apply text-blue-100 hidden md:block;
 }
 
 .swiper-slide img {

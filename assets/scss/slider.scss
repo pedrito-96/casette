@@ -1,0 +1,59 @@
+@import url("swiper/css");
+@import url("swiper/css/navigation");
+@import url("swiper/css/pagination");
+
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply bg-white;
+
+    padding: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .swiper-button-prev {
+    background-image: url("../../icons/arrow-left.svg");
+    background-color: transparent;
+  }
+
+  .swiper-button-next {
+    background-image: url("../../icons/arrow-right.svg");
+    background-color: transparent;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      content: "";
+    }
+    @apply hidden md:block h-10 w-10;
+  }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      @apply border-black w-1.5 h-1.5 rounded-full border-solid mx-0.5 opacity-100;
+      border-width: 0.02rem;
+      background-color: transparent;
+
+      &-active {
+        @apply bg-black;
+      }
+    }
+    .swiper-pagination-progressbar swiper-pagination-horizontal {
+      bottom: 0;
+      background-color: rgb(255, 145, 0);
+    }
+  }
+}
